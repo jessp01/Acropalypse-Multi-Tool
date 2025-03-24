@@ -54,7 +54,7 @@ If you want to build the container yourself use: `sudo docker build -t acropalyp
 
 You can invoke `acropalypse_cli.py` with the original image as the first argument:
 
-```sh
+```
 ./acropalypse_cli.py /tmp/ch42/Capture.png 
 Found 419252 trailing bytes!
 Extracted 419148 bytes of idat!
