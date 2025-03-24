@@ -2,7 +2,7 @@
 
 ### A Comprehensive Solution for Acropalypse-Affected Images
 
-Easily restore PNG and GIF files that have fallen victim to the Acropalypse CVE from 2023. This all-in-one solution effectively recovers image data accidentially stored in cropped screenshots by Google Pixel phones or Windows Snipping Tool, and can search and detect vulnerable images within local folders.
+Easily restore PNG and GIF files that have fallen victim to the [Acropalypse CVE-2023-28303](https://msrc.microsoft.com/update-guide/vulnerability/CVE-2023-28303) from 2023. This all-in-one solution effectively recovers image data accidentially stored in cropped screenshots by Google Pixel phones or Windows Snipping Tool, and can search and detect vulnerable images within local folders.
 
 This Tool works seamlessly with Python 3.10 cross-platform on Windows and Linux-based systems.
 
