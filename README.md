@@ -32,11 +32,12 @@ The GUI has two main tools:
 - DetectTool: This tool helps to identify the pictures that are vulnerable to the acropalypse bug in a specific folder.
 - RestoreTool: This tool assists in restoring the vulnerable pictures.
 
-Install the required Python Version and Libraries and open the Tool via Commandline with
+Install the required Python Version and Libraries (see [Running without GUI](#running-without-GUI) if you want to avoid
+having to install deps) and open the Tool in the terminal with:
 
 `python ./gui.py`
 
-You can also use the prebuilt **docker image**:
+You can also use the pre-built **docker image**:
 
 On Linux run:
 ```
@@ -45,9 +46,27 @@ sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix frankthetan
 ```
 This docker image uses the python:3.10 container, see Dockerfile for how it is configured.
 
-On Windows you will have to install and configure X-Server for the gui to work.
+On Windows you will have to install and configure X-Server for the GUI to work.
 
 If you want to build the container yourself use: `sudo docker build -t acropalypse-multi-tool .` and then run `xhost +local:` and `sudo docker run -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix acropalypse-multi-tool`.
+
+### Running without GUI
+
+You can invoke `acropalypse_cli.py` with the original image as the first argument:
+
+```sh
+./acropalypse_cli.py /tmp/ch42/Capture.png 
+Found 419252 trailing bytes!
+Extracted 419148 bytes of idat!
+building bitstream...
+reconstructing bit-shifted bytestreams...
+Scanning for viable parses...
+Found viable parse at bit offset 278910!
+Generating output PNG...
+Done!
+Reconstructed image saved to: /tmp/restored.png
+```
+
 ### System Compatibility
 
 - Python 3.10 (other versions may also work)
